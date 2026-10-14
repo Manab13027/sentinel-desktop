@@ -1,0 +1,56 @@
+# Sentinel offline threat-intel seed list.
+# Format:  <type> <value> <category> [note]
+#   type: domain | ip | cidr
+#   category: malicious | mining | tunnel | anonymizer | suspicious
+# Domain rules match the domain and all subdomains.
+# Import larger feeds (e.g. FireHOL level1, abuse.ch URLhaus hostfile) from the
+# Threat Intel screen when you are online; they are merged into your local copy.
+
+# --- Cryptocurrency mining pools (cryptojacking) ---
+domain minexmr.com            mining
+domain supportxmr.com         mining
+domain xmrpool.eu             mining
+domain nanopool.org           mining
+domain moneroocean.stream     mining
+domain hashvault.pro          mining
+domain c3pool.com             mining
+domain f2pool.com             mining
+domain 2miners.com            mining
+domain herominers.com         mining
+domain unmineable.com         mining
+domain coinhive.com           mining
+domain crypto-loot.com        mining
+
+# --- Tunnelling / reverse-proxy services often abused for C2 & exfiltration ---
+domain ngrok.io               tunnel
+domain ngrok-free.app         tunnel
+domain trycloudflare.com      tunnel
+domain serveo.net             tunnel
+domain localtunnel.me         tunnel
+domain loca.lt                tunnel
+domain pagekite.me            tunnel
+
+# --- Anonymizers ---
+domain onion                  anonymizer   Tor hidden service
+domain tor2web.org            anonymizer
+domain onion.ws               anonymizer
+domain onion.ly               anonymizer
+
+# --- Free dynamic DNS (legit uses exist, heavily abused by RATs) ---
+domain duckdns.org            suspicious
+domain no-ip.org              suspicious
+domain ddns.net               suspicious
+domain hopto.org              suspicious
+domain zapto.org              suspicious
+domain servegame.com          suspicious
+domain myftp.biz              suspicious
+
+# --- Paste / file-drop sites used for payload staging ---
+domain pastebin.com           suspicious   Often used to host second-stage payloads
+domain paste.ee               suspicious
+domain transfer.sh            suspicious
+domain anonfiles.com          suspicious
+
+# --- Bogon / reserved ranges that should never appear as public peers ---
+cidr 0.0.0.0/8                suspicious   Reserved
+cidr 240.0.0.0/4              suspicious   Reserved

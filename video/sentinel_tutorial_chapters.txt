@@ -1,0 +1,8 @@
+0:00 Intro
+0:17 The dashboard
+0:56 Open ports & closing them
+1:44 Network monitor
+2:36 Vulnerabilities & patches
+3:18 AI advisor
+3:53 Settings
+4:12 Wrap-up

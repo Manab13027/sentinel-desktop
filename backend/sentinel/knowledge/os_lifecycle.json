@@ -1,0 +1,13 @@
+{
+  "_comment": "Editable OS support lifecycle table used to flag end-of-support systems. Dates are for Home/Pro editions (Windows) and Apple's usual N-2 policy (macOS).",
+  "windows_builds": [
+    {"min_build": 0,     "max_build": 19045, "name": "Windows 10 or older", "eos": "2025-10-14", "note": "Windows 10 reached end of support on 14 Oct 2025 (security updates only via paid ESU)."},
+    {"min_build": 22000, "max_build": 22000, "name": "Windows 11 21H2", "eos": "2023-10-10"},
+    {"min_build": 22621, "max_build": 22621, "name": "Windows 11 22H2", "eos": "2024-10-08"},
+    {"min_build": 22631, "max_build": 22631, "name": "Windows 11 23H2", "eos": "2025-11-11"},
+    {"min_build": 26100, "max_build": 26100, "name": "Windows 11 24H2", "eos": "2026-10-13"},
+    {"min_build": 26200, "max_build": 26200, "name": "Windows 11 25H2", "eos": "2027-10-12"}
+  ],
+  "macos_min_supported_major": 15,
+  "macos_note": "Apple generally provides full security updates only for the current macOS and the two previous major releases."
+}

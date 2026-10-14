@@ -1,0 +1,14 @@
+node_modules/
+dist/
+backend-dist/
+build-py/
+.venv-build/
+__pycache__/
+*.pyc
+
+# auto-excluded (over GitHub's 100MB limit)
+dist/Sentinel-1.0.0-arm64.dmg
+dist/mac-arm64/Sentinel.app/Contents/Frameworks/Electron Framework.framework/Electron Framework
+dist/mac-arm64/Sentinel.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework
+node_modules/electron/dist/Electron.app/Contents/Frameworks/Electron Framework.framework/Electron Framework
+node_modules/electron/dist/Electron.app/Contents/Frameworks/Electron Framework.framework/Versions/A/Electron Framework

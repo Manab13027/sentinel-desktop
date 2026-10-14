@@ -1,0 +1,373 @@
+1
+00:00:00,000 --> 00:00:04,899
+This is Sentinel: an AI-powered security
+app for Windows and Mac that works
+
+2
+00:00:04,939 --> 00:00:06,150
+completely offline.
+
+3
+00:00:06,647 --> 00:00:10,403
+In the next few minutes, I'll show you how
+it finds open ports,
+
+4
+00:00:10,443 --> 00:00:13,115
+spots apps talking to servers they
+shouldn't,
+
+5
+00:00:13,155 --> 00:00:15,887
+and fixes vulnerabilities with a single
+click.
+
+6
+00:00:17,279 --> 00:00:19,510
+Everything starts on the dashboard.
+
+7
+00:00:19,550 --> 00:00:23,273
+One scan checks your open ports, your
+network connections,
+
+8
+00:00:23,313 --> 00:00:25,609
+and your system's security settings.
+
+9
+00:00:26,101 --> 00:00:29,313
+On the left are the most exposed ports,
+ranked by risk,
+
+10
+00:00:29,353 --> 00:00:32,151
+along with the application that opened
+each one.
+
+11
+00:00:32,642 --> 00:00:35,325
+In the middle is your overall security
+score.
+
+12
+00:00:35,365 --> 00:00:38,592
+This machine scores poorly, with four
+critical issues.
+
+13
+00:00:39,083 --> 00:00:43,209
+On the right, the vulnerability board
+counts open issues by severity,
+
+14
+00:00:43,249 --> 00:00:47,013
+including two that attackers are actively
+exploiting right now.
+
+15
+00:00:47,505 --> 00:00:50,491
+Below that, you can see how exposed your
+ports are,
+
+16
+00:00:50,531 --> 00:00:52,983
+what Sentinel recommends doing about them,
+
+17
+00:00:53,023 --> 00:00:55,535
+and the state of every outbound
+connection.
+
+18
+00:00:56,927 --> 00:00:59,081
+Let's look at the open ports.
+
+19
+00:00:59,121 --> 00:01:05,133
+Each row shows the port, the service, and
+the exact program behind it: its name,
+
+20
+00:01:05,173 --> 00:01:07,857
+process ID, user, and file location.
+
+21
+00:01:08,348 --> 00:01:12,608
+Click any row, and Sentinel's AI explains
+the risk in plain English.
+
+22
+00:01:13,100 --> 00:01:14,668
+This one is a red flag.
+
+23
+00:01:14,708 --> 00:01:18,724
+Port 4444, the default port for Metasploit
+reverse shells,
+
+24
+00:01:18,764 --> 00:01:22,360
+opened by a program running from a
+temporary folder.
+
+25
+00:01:22,853 --> 00:01:24,838
+To close it, click "Close port".
+
+26
+00:01:24,878 --> 00:01:27,622
+Sentinel offers to block it in the
+firewall,
+
+27
+00:01:27,662 --> 00:01:30,343
+and it can also stop the program behind
+it.
+
+28
+00:01:30,833 --> 00:01:32,781
+I'll choose "Yes, close port".
+
+29
+00:01:32,821 --> 00:01:37,883
+Windows asks for administrator permission,
+and the port is blocked instantly.
+
+30
+00:01:38,378 --> 00:01:42,658
+Blocked ports are marked with a lock, and
+you can undo any block with one click.
+
+31
+00:01:44,051 --> 00:01:45,814
+Next, the network monitor.
+
+32
+00:01:45,854 --> 00:01:51,155
+Every fifteen seconds, Sentinel checks
+which applications are connecting out,
+
+33
+00:01:51,195 --> 00:01:52,611
+and exactly where to.
+
+34
+00:01:53,101 --> 00:01:55,962
+Here it caught a program called
+update.exe,
+
+35
+00:01:56,002 --> 00:01:59,200
+sending traffic to a cryptocurrency mining
+pool.
+
+36
+00:01:59,240 --> 00:02:01,831
+That's a classic sign of cryptojacking.
+
+37
+00:02:02,323 --> 00:02:07,516
+And this file, opened from the Downloads
+folder, is talking to a raw IP address,
+
+38
+00:02:07,556 --> 00:02:10,133
+on a port used by remote-access trojans.
+
+39
+00:02:10,624 --> 00:02:13,560
+Sentinel also learns what's normal for
+each app.
+
+40
+00:02:13,600 --> 00:02:18,024
+After the first day, any brand-new
+destination is flagged as an anomaly.
+
+41
+00:02:18,516 --> 00:02:21,373
+For strict control, switch to Allowlist
+mode.
+
+42
+00:02:21,413 --> 00:02:25,816
+Then any destination you haven't approved
+is flagged as unauthorised.
+
+43
+00:02:26,307 --> 00:02:29,037
+One click blocks the address in the
+firewall.
+
+44
+00:02:29,077 --> 00:02:33,037
+And if you don't recognise the program,
+Sentinel can stop it too.
+
+45
+00:02:36,124 --> 00:02:37,446
+Now, vulnerabilities.
+
+46
+00:02:37,486 --> 00:02:42,569
+Sentinel audits your operating system, and
+checks your installed apps against a
+
+47
+00:02:42,609 --> 00:02:44,904
+built-in database of known exploits.
+
+48
+00:02:45,396 --> 00:02:48,893
+Findings are grouped by category, and
+sorted by severity.
+
+49
+00:02:48,933 --> 00:02:52,306
+Anything being exploited in the wild is
+clearly marked.
+
+50
+00:02:52,797 --> 00:02:55,318
+Click "How to fix", and you get a full
+
+51
+00:02:55,358 --> 00:02:58,257
+playbook: why it matters, the manual
+steps,
+
+52
+00:02:58,297 --> 00:03:01,007
+and the exact commands Sentinel will run.
+
+53
+00:03:01,944 --> 00:03:04,091
+Click "Apply fix automatically".
+
+54
+00:03:04,131 --> 00:03:09,694
+Sentinel applies the fix, then re-checks
+the system, to confirm it's really fixed.
+
+55
+00:03:10,185 --> 00:03:15,402
+For missing patches, run a deep scan, and
+Sentinel lists every update that Windows
+
+56
+00:03:15,442 --> 00:03:17,325
+or macOS hasn't installed yet.
+
+57
+00:03:18,718 --> 00:03:20,614
+All of this feeds the AI advisor.
+
+58
+00:03:20,654 --> 00:03:23,078
+You can ask it anything about your system.
+
+59
+00:03:23,995 --> 00:03:28,541
+It answers using your live scan results
+and its built-in security knowledge.
+
+60
+00:03:28,581 --> 00:03:31,015
+No internet, and no cloud model required.
+
+61
+00:03:31,506 --> 00:03:35,554
+On the right is your action plan, ordered
+by impact versus effort,
+
+62
+00:03:35,594 --> 00:03:37,846
+so you always know what to fix first.
+
+63
+00:03:38,338 --> 00:03:43,512
+After fixing things, press "Refresh", and
+anything that's resolved drops off the
+
+64
+00:03:43,552 --> 00:03:43,838
+plan.
+
+65
+00:03:44,329 --> 00:03:47,277
+If you have a local AI model installed
+with Ollama,
+
+66
+00:03:47,317 --> 00:03:50,324
+Sentinel can use it for more
+conversational answers.
+
+67
+00:03:50,364 --> 00:03:52,199
+But everything works without it.
+
+68
+00:03:53,591 --> 00:03:54,661
+Finally, settings.
+
+69
+00:03:54,701 --> 00:03:57,682
+Here you manage your allowed and blocked
+domains,
+
+70
+00:03:57,722 --> 00:04:01,751
+and import extra threat-intelligence feeds
+whenever you're online.
+
+71
+00:04:02,563 --> 00:04:05,051
+Every firewall rule Sentinel creates is
+
+72
+00:04:05,091 --> 00:04:07,943
+listed here, so you can undo it at any
+time.
+
+73
+00:04:07,983 --> 00:04:10,653
+And the activity log records every action.
+
+74
+00:04:12,046 --> 00:04:13,408
+And that's Sentinel.
+
+75
+00:04:13,448 --> 00:04:17,684
+Your ports, your network, and your
+patches, all in one place,
+
+76
+00:04:17,724 --> 00:04:19,296
+and completely offline.
+
+77
+00:04:19,786 --> 00:04:23,342
+If you found this video useful, please
+like, subscribe,
+
+78
+00:04:23,382 --> 00:04:26,676
+and share it with someone who cares about
+security.
+
+79
+00:04:27,167 --> 00:04:30,274
+And if you'd like a copy of Sentinel for
+yourself,
+
+80
+00:04:30,314 --> 00:04:32,728
+just send me a message here on YouTube.
+
+81
+00:04:32,768 --> 00:04:33,987
+Thanks for watching.
+

@@ -1,0 +1,78 @@
+Sentinel – an offline, AI-powered security app for Windows and macOS that finds open ports, catches apps connecting to unauthorised servers, and fixes vulnerabilities with one click.
+
+In this walkthrough I show the full app running on a Windows 11 PC: from the first scan, to closing a dangerous port, to catching a hidden crypto-miner, to patching the system and asking the built-in AI advisor what to fix first. Everything you see runs locally. No cloud account, no subscription, and no data ever leaves your computer.
+
+If you'd like a copy of Sentinel for your own PC or Mac, send me a message here on YouTube.
+
+━━━━━━━━━━━━━━━━━━━━
+CHAPTERS
+━━━━━━━━━━━━━━━━━━━━
+0:00 Intro
+0:17 The dashboard
+0:56 Open ports & closing them
+1:44 Network monitor
+2:36 Vulnerabilities & patches
+3:18 AI advisor
+3:53 Settings
+4:12 Wrap-up
+
+━━━━━━━━━━━━━━━━━━━━
+WHAT SENTINEL DOES
+━━━━━━━━━━━━━━━━━━━━
+► Open port scanner with app details
+Lists every listening TCP and UDP port together with the exact program behind it: name, process ID, user, parent process and file location. Each port gets a 0–100 risk score and a clear recommendation: Close, Review or Keep.
+
+► One-click port closing
+Click "Close port", confirm with "Yes", and Sentinel blocks the port in the Windows Firewall (or macOS pf firewall). You can also stop the program or disable the Windows service behind it. Every block is reversible from Settings.
+
+► Unauthorised IP and domain detection
+Sentinel checks outbound connections every 15 seconds and flags apps that talk to:
+• known malicious or crypto-mining destinations
+• tunnelling services often used for data theft (e.g. ngrok)
+• raw IP addresses on remote-access trojan ports
+• anything outside your allowlist (optional strict mode)
+• brand-new destinations that don't match an app's learned behaviour
+Block the address, stop the program, or mark it as trusted in one click.
+
+► Vulnerability scanner and patching
+Audits your system for real-world weaknesses: unsupported OS versions, firewall off, SMBv1, Remote Desktop exposure, LLMNR, UAC, BitLocker / FileVault, Secure Boot, Gatekeeper, SIP, stale updates and more. It also checks installed apps against an offline list of known exploited vulnerabilities (CVEs), and a Deep Scan lists every Windows or macOS update you're missing.
+
+► Built-in fix playbooks
+Every finding comes with an explanation, manual steps and the exact commands Sentinel will run. Click "Apply fix automatically" and Sentinel applies the fix, then re-checks the system to confirm it's really fixed.
+
+► Offline AI security advisor
+Ask questions in plain English, like "What should I fix first?" or "Why is port 445 risky?". The advisor answers from your live scan and its built-in security knowledge, gives you a security score, and builds an action plan ranked by impact versus effort. It needs no internet. If you have Ollama installed, it can use a local AI model for more conversational answers.
+
+━━━━━━━━━━━━━━━━━━━━
+WHY OFFLINE MATTERS
+━━━━━━━━━━━━━━━━━━━━
+Most security tools send your data to the cloud. Sentinel keeps everything on your machine: scan results, policies and history. That makes it suitable for air-gapped systems, labs, small offices, and anyone who doesn't want their network activity uploaded somewhere else. Internet is only needed when you choose to download OS or app updates, or import fresh threat feeds.
+
+━━━━━━━━━━━━━━━━━━━━
+WHO IT'S FOR
+━━━━━━━━━━━━━━━━━━━━
+• Home users who want to know what's really running on their PC
+• Students learning networking and cyber security
+• IT admins and small businesses without a full security team
+• Developers who want to check what their machines expose
+• Anyone running Windows 10/11 or macOS who cares about privacy
+
+━━━━━━━━━━━━━━━━━━━━
+WANT SENTINEL?
+━━━━━━━━━━━━━━━━━━━━
+Sentinel installs as a standalone desktop app on Windows (.exe installer) and macOS (.dmg). If you'd like a copy, message me here on YouTube and I'll get back to you.
+
+━━━━━━━━━━━━━━━━━━━━
+SUPPORT THE CHANNEL
+━━━━━━━━━━━━━━━━━━━━
+👍 If this video helped you, please LIKE it, it really helps.
+🔔 SUBSCRIBE for more security tools, AI projects and tutorials.
+↗ SHARE it with a friend or colleague who cares about keeping their computer safe.
+💬 Comment below: what feature should I add to Sentinel next?
+
+━━━━━━━━━━━━━━━━━━━━
+NOTE
+━━━━━━━━━━━━━━━━━━━━
+The threats shown in this demo (crypto-miner, reverse-shell port, suspicious tunnel) are simulated sample data on a test machine so the features can be shown safely. Only scan and change systems you own or are authorised to manage. Sentinel helps reduce risk but no single tool can guarantee complete protection, so keep your OS updated and your backups current.
+
+#cybersecurity #windows11 #macos #firewall #portscanner #vulnerabilityscanner #infosec #privacy #AI #networksecurity #malwaredetection #securitytools

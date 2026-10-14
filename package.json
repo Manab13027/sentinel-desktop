@@ -1,0 +1,79 @@
+{
+  "name": "sentinel-desktop",
+  "productName": "Sentinel",
+  "version": "1.0.0",
+  "description": "Offline AI-assisted endpoint security: open ports, vulnerable software, missing patches and unauthorised network connections.",
+  "main": "electron/main.js",
+  "author": "Fighter",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "start": "electron .",
+    "backend:dev": "python3 backend/server.py --port 8765 --token dev",
+    "build:backend:mac": "bash scripts/build_backend.sh",
+    "build:backend:win": "powershell -ExecutionPolicy Bypass -File scripts/build_backend.ps1",
+    "dist:mac": "npm run build:backend:mac && electron-builder --mac",
+    "dist:win": "npm run build:backend:win && electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^44.7.0",
+    "electron-builder": "^26.15.3"
+  },
+  "build": {
+    "appId": "com.fighter.sentinel",
+    "productName": "Sentinel",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "electron/**",
+      "renderer/**",
+      "build/icon.png",
+      "build/tray*.png",
+      "package.json"
+    ],
+    "extraResources": [
+      {
+        "from": "backend-dist",
+        "to": "backend",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.utilities",
+      "target": [
+        {
+          "target": "dmg"
+        }
+      ],
+      "icon": "build/icon.png",
+      "darkModeSupport": true,
+      "hardenedRuntime": true
+    },
+    "dmg": {
+      "title": "Sentinel ${version}"
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "icon": "build/icon.png",
+      "requestedExecutionLevel": "requireAdministrator"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "shortcutName": "Sentinel"
+    }
+  }
+}
